@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NhacCuaTui - Nghe nhạc Mới, tải nhạc Hot chất lượng cao</title>
+    <link rel="shortcut icon" href="https://stc-id-ex-swe.nixcdn.com/v12n/favicon.png" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <!-- Sidebar Heading -->
+        <header class="sidebar-heading">
+          <div class="sidebar-heading__logo">
+            <img class="sidebar-heading__logo-img" src="./assets/images/logo.png" alt="Logo" />
+          </div>
+          <div class="sidebar-heading__update">
+            <a class="sidebar-heading__update-link" target="_blank" href="https://www.nhaccuatui.com/nhaccuatui-vip/mua-vip">NÂNG CẤP</a>
+          </div>
+        </header>
+
+        <!-- Sidebar User -->
+        <div class="sidebar-user">
+          <div class="sidebar-user__profile">
+            <img class="sidebar-user__profile-img" src="./assets/images/default_avatar.png" alt="User Avatar" />
+            <span class="sidebar-user__profile-name">Nguyễn Tuấn</span>
+          </div>
+          <div class="sidebar-user__setting">
+            <i class="sidebar-user__setting-icon bi bi-gear"></i>
+            <div class="sidebar-user__setting-menu">
+              <ul class="setting-menu__list">
+                <li class="setting-menu__list-option js-warning">
+                  <i class="bi bi-translate"></i>
+                  Ngôn ngữ
+                  <i class="setting-menu__list-option-arrow bi bi-chevron-right">
+                    <ul class="list-option__box">
+                      <li class="js-warning">Tiếng Việt</li>
+                      <li class="js-warning">Tiếng Anh</li>
+                    </ul>
+                  </i>
+                </li>
+                <li class="setting-menu__list-option js-warning">
+                  <i class="bi bi-tools"></i>
+                  Quản lí thiết bị
+                </li>
+                <li class="setting-menu__list-option js-warning">
+                  <i class="bi bi-headset"></i>
+                  Hỗ trợ
+                </li>
+                <li class="setting-menu__list-option js-warning">
+                  <i class="bi bi-moon-stars-fill"></i>
+                  Chủ đề
+                  <i class="setting-menu__list-option-arrow bi bi-chevron-right">
+                    <ul class="list-option__box">
+                      <li class="js-warning">Nền sáng</li>
+                      <li class="js-warning">Nền Tối</li>
+                    </ul>
+                  </i>
+                </li>
+                <li class="setting-menu__list-option js-warning">
+                  <i class="bi bi-box-arrow-right"></i>
+                  Đăng xuất
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Sidebar Options -->
+        <div class="sidebar-options">
+          <ul class="sidebar-options__list">
+            <li class="list-option js-warning">
+              <i class="list-option__icon bi bi-search" style="background: linear-gradient(to right top, rgb(0, 181, 9), rgb(119, 226, 84))"></i>
+              <span>Tìm kiếm</span>
+            </li>
+            <li class="list-option active">
+              <i class="list-option__icon bi bi-house-door-fill" style="background: linear-gradient(to right top, rgb(40, 123, 229), rgb(41, 215, 255))"></i>
+              <span>Trang chủ</span>
+            </li>
+            <li class="list-option js-warning">
+              <i class="list-option__icon bi bi-slash-circle-fill" style="background: linear-gradient(to right top, rgb(255, 155, 45), rgb(255, 228, 67))"></i>
+              <span>Khám phá</span>
+              <button class="list-option__more-btn">
+                <i class="bi bi-chevron-compact-down"></i>
+              </button>
+            </li>
+            <div class="list-option__more">
+              <a href="#" class="list-option__more-link js-warning">
+                <i class="more-link__icon bi bi-circle-fill"></i>
+                Bài Hát</a
+              >
+              <a href="#" class="list-option__more-link js-warning">
+                <i class="more-link__icon bi bi-circle-fill"></i>
+                Playlist</a
+              >
+              <a href="#" class="list-option__more-link js-warning">
+                <i class="more-link__icon bi bi-circle-fill"></i>
+                Video</a
+              >
+              <a href="#" class="list-option__more-link js-warning">
+                <i class="more-link__icon bi bi-circle-fill"></i>
+                Nghệ Sỹ</a
+              >
+            </div>
+            <li class="list-option js-warning">
+              <i class="list-option__icon bi bi-file-earmark-music-fill" style="background: linear-gradient(to right top, rgb(26, 130, 229), rgb(223, 34, 242))"></i>
+              <span>Nghe gì hôm nay</span>
+              <button class="list-option__more-btn">
+                <i class="bi bi-chevron-compact-down"></i>
+              </button>
+            </li>
+            <div class="list-option__more">
+              <a href="#" class="list-option__more-link js-warning">
+                <i class="more-link__icon bi bi-circle-fill"></i>
+                Chủ Đề</a
+              >
+              <a href="#" class="list-option__more-link js-warning">
+                <i class="more-link__icon bi bi-circle-fill"></i>
+                Tuyển Tập</a
+              >
+              <a href="#" class="list-option__more-link js-warning">
+                <i class="more-link__icon bi bi-circle-fill"></i>
+                Top 100</a
+              >
+            </div>
+            <li class="list-option js-warning">
+              <i class="list-option__icon bi bi-bar-chart-fill" style="background: linear-gradient(to right top, rgb(244, 67, 54), rgb(255, 179, 83))"></i>
+              <span>BXH NCT</span>
+            </li>
+            <li class="list-option js-warning">
+              <i class="list-option__icon bi bi-music-player-fill" style="background: linear-gradient(to right top, rgb(39, 179, 226), rgb(19, 248, 229))"></i>
+              <span>Music 4U</span>
+            </li>
+            <li class="list-option js-warning">
+              <i class="list-option__icon bi bi-cloud-arrow-up-fill" style="background: linear-gradient(to right top, rgb(40, 123, 229), rgb(41, 215, 255))"></i>
+              <span>Upload</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Sidebar Library -->
+        <div class="sidebar-library">
+          <h3 class="sidebar-library__title">THƯ VIỆN</h3>
+          <ul class="sidebar-library__list">
+            <li class="list-option js-warning">
+              <i class="library__list-option-icon bi bi-cloud"></i>
+              NhacCuaTui
+            </li>
+            <li class="list-option js-warning">
+              <i class="library__list-option-icon bi bi-clock-history"></i>
+              Lịch Sử
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Feedback -->
+      <div class="feedback">
+        <img src="./assets/images/thumbnail_feedback_box.png" alt="Feedback" class="feedback-img" />
+        <div class="feedback-container">
+          <div class="feedback-header">
+            <p class="feedback-header__title">Có gì mới?</p>
+          </div>
+          <div class="feedback-content">
+            <div class="feedback-content__message">
+              <img src="./assets/images/avatar_tui.png" alt="Avatar" class="message-icon" />
+              <div class="message-content">
+                <span>Chào mừng bạn đến với NhacCuaTui #phienbanmoi</span>
+              </div>
+            </div>
+            <div class="feedback-content__message">
+              <img src="./assets/images/avatar_tui.png" alt="Avatar" class="message-icon" />
+              <div class="message-content">
+                <span>Bạn đã sẵn sàng chưa? Bắt đầu cùng Tui khám phá #phienbanmoi nhé!</span>
+              </div>
+            </div>
+          </div>
+          <div class="feedback-footer">
+            <a target="_blank" href="https://docs.google.com/forms/d/e/1FAIpQLScLG-kOQX_ycS3QmSJ8jQ-ZcOKhRnnZQVinoB2X7TBo-fi4Og/closedform" class="feedback-footer__link"
+              >Bạn nghĩ gì về #phienbanmoi
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Aside -->
+      <div class="aside">
+        <!-- Aside Body -->
+        <div class="aside-body">
+          <!-- Aside Body Thumbnail -->
+          <div class="aside-body__thumbnail">
+            <div class="aside-body__thumbnail-img">
+              <div class="container__thumbnail-img">
+                <img src="" alt="Image" class="thumbnail-img" />
+              </div>
+              <h3 class="aside-body__thumbnail-name">Name</h3>
+              <p class="aside-body__thumbnail-singer">Name</p>
+            </div>
+            <a href="" class="aside-body__link">Playlist: Bảng xếp hạng bài hát Việt Nam</a>
+          </div>
+
+          <!-- Aside Body Playlist -->
+          <div class="aside-body__playlist">
+            <div class="aside-body__playlist-header">
+              <p>Đang phát</p>
+              <div class="playlist-header__btn">
+                <i class="bi bi-chevron-down"></i>
+              </div>
+            </div>
+
+            <div class="aside-body__playlist-status">
+              <div class="playlist-status__img">
+                <img class="playlist-status__img-song" src="" alt="Image Song" />
+              </div>
+              <div class="playlist-status__description">
+                <p class="status__description-name">Name</p>
+                <p class="status__description-singer">Name</p>
+              </div>
+              <div class="playlist-status__more">
+                <div class="status__more-btn">
+                  <i class="bi bi-three-dots-vertical"></i>
+                </div>
+
+                <div class="status__more-listens">
+                  <i class="bi bi-headphones"></i>
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+            <div class="aside-body__playlist-content">
+              <div class="playlist-content__header">
+                <p>Tiếp theo</p>
+              </div>
+
+              <div class="playlist-content__container"></div>
+            </div>
+          </div>
+
+          <!-- Aside Quality -->
+          <div class="aside-body__quality">
+            <div class="aside-body__quality-header">
+              <p class="quality-header__title">Chọn chất lượng:</p>
+              <div class="quality-header__btn">
+                <i class="header__btn-close bi bi-x-lg"></i>
+              </div>
+            </div>
+
+            <div class="aside-body__quality-body">
+              <div class="quality-body__title">Chất lượng nghe nhạc</div>
+              <div class="quality-body__option">
+                <input type="radio" id="quality-option__low" name="option" value="128Kbps" />
+                <label for="quality-option__low">128Kbps</label><br />
+              </div>
+              <div class="quality-body__option">
+                <input type="radio" id="quality-option__high" name="option" value="320Kbps" />
+                <label for="quality-option__high">320Kbps</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Aside Footer -->
+        <div class="aside-footer">
+          <div class="aside-footer__head">
+            <div class="footer__head-volume">
+              <input type="range" class="volume-control" min="0" max="100" step="1" value="100" />
+              <i class="volume__icon active bi bi-volume-up"></i>
+              <i class="volume__icon bi bi-volume-down"></i>
+              <i class="volume__icon bi bi-volume-mute"></i>
+            </div>
+            <div class="footer__head-btn">
+              <p class="head-btn__description active">Danh sách phát</p>
+              <p class="head-btn__description">Đang phát</p>
+            </div>
+            <div class="footer__head-more">
+              <div class="head-more__icon">
+                <i class="bi bi-three-dots-vertical"></i>
+              </div>
+              <div class="head-more__menu">
+                <ul class="head-more__menu-options">
+                  <li class="head-more__menu-option">
+                    <i class="bi bi-cloud-check"></i>
+                    Thêm vào Cloud
+                  </li>
+                  <li class="head-more__menu-option">
+                    <i class="bi bi-cloud-plus"></i>
+                    Thêm vào chờ phát
+                  </li>
+                  <li class="head-more__menu-option">
+                    <i class="bi bi-link-45deg"></i>
+                    Sao chép Link
+                  </li>
+                  <li class="head-more__menu-option">
+                    <i class="bi bi-music-note"></i>
+                    Đi đến bài hát
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="aside-footer__progress">
+            <div class="footer__progress-now">
+              <p>0:00</p>
+            </div>
+            <input type="range" class="footer__progress" min="0" max="100" step="1" value="0" />
+            <div class="footer__progress-time">
+              <p>0:00</p>
+            </div>
+          </div>
+
+          <div class="aside-footer__control">
+            <div class="footer__control-btn">
+              <i class="btn-shuffle bi bi-shuffle"></i>
+            </div>
+            <div class="footer__control-btn">
+              <i class="btn-backward bi bi-skip-backward-fill"></i>
+            </div>
+            <div class="footer__control">
+              <i class="btn-control active bi bi-play-fill"></i>
+              <i class="btn-control bi bi-pause-fill"></i>
+            </div>
+            <div class="footer__control-btn">
+              <i class="btn-forward bi bi-skip-forward-fill"></i>
+            </div>
+            <div class="footer__control-btn">
+              <i class="btn-repeat bi bi-arrow-repeat"></i>
+            </div>
+          </div>
+
+          <div class="aside-footer__quality">
+            <p>128Kps</p>
+          </div>
+        </div>
+
+        <!-- Aside Audio -->
+        <audio src="" id="aside-audio"></audio>
+      </div>
+
+      <!-- Body -->
+      <div class="body">
+        <!-- Body Homepage -->
+        <div class="body-homepage">
+          <div class="body-homepage__slide">
+            <div class="slide-thumbnail thumbnail-back">
+              <img src="./assets/images/slide-1.jpg" alt="Slide Image" class="thumbnail__img-back slide-thumbnail__img active" />
+              <img src="./assets/images/slide-2.jpg" alt="Slide Image" class="thumbnail__img-back slide-thumbnail__img" />
+              <img src="./assets/images/slide-3.jpg" alt="Slide Image" class="thumbnail__img-back slide-thumbnail__img" />
+              <img src="./assets/images/slide-4.jpg" alt="Slide Image" class="thumbnail__img-back slide-thumbnail__img" />
+              <img src="./assets/images/slide-5.jpg" alt="Slide Image" class="thumbnail__img-back slide-thumbnail__img" />
+              <img src="./assets/images/slide-6.jpg" alt="Slide Image" class="thumbnail__img-back slide-thumbnail__img" />
+              <img src="./assets/images/slide-7.jpg" alt="Slide Image" class="thumbnail__img-back slide-thumbnail__img" />
+            </div>
+            <div class="slide-thumbnail thumbnail-now">
+              <img src="./assets/images/slide-1.jpg" alt="Slide Image" class="thumbnail__img-now slide-thumbnail__img" />
+              <img src="./assets/images/slide-2.jpg" alt="Slide Image" class="thumbnail__img-now slide-thumbnail__img active" />
+              <img src="./assets/images/slide-3.jpg" alt="Slide Image" class="thumbnail__img-now slide-thumbnail__img" />
+              <img src="./assets/images/slide-4.jpg" alt="Slide Image" class="thumbnail__img-now slide-thumbnail__img" />
+              <img src="./assets/images/slide-5.jpg" alt="Slide Image" class="thumbnail__img-now slide-thumbnail__img" />
+              <img src="./assets/images/slide-6.jpg" alt="Slide Image" class="thumbnail__img-now slide-thumbnail__img" />
+              <img src="./assets/images/slide-7.jpg" alt="Slide Image" class="thumbnail__img-now slide-thumbnail__img" />
+            </div>
+            <div class="slide-thumbnail thumbnail-next">
+              <img src="./assets/images/slide-1.jpg" alt="Slide Image" class="thumbnail__img-next slide-thumbnail__img" />
+              <img src="./assets/images/slide-2.jpg" alt="Slide Image" class="thumbnail__img-next slide-thumbnail__img" />
+              <img src="./assets/images/slide-3.jpg" alt="Slide Image" class="thumbnail__img-next slide-thumbnail__img active" />
+              <img src="./assets/images/slide-4.jpg" alt="Slide Image" class="thumbnail__img-next slide-thumbnail__img" />
+              <img src="./assets/images/slide-5.jpg" alt="Slide Image" class="thumbnail__img-next slide-thumbnail__img" />
+              <img src="./assets/images/slide-6.jpg" alt="Slide Image" class="thumbnail__img-next slide-thumbnail__img" />
+              <img src="./assets/images/slide-7.jpg" alt="Slide Image" class="thumbnail__img-next slide-thumbnail__img" />
+            </div>
+
+            <div class="slide-status">
+              <div class="slide-status__icon"></div>
+              <div class="slide-status__icon active"></div>
+              <div class="slide-status__icon"></div>
+              <div class="slide-status__icon"></div>
+              <div class="slide-status__icon"></div>
+              <div class="slide-status__icon"></div>
+              <div class="slide-status__icon"></div>
+            </div>
+            <div class="slide-btn slide-btn__left">
+              <i class="bi bi-chevron-left"></i>
+            </div>
+            <div class="slide-btn slide-btn__right">
+              <i class="bi bi-chevron-right"></i>
+            </div>
+          </div>
+
+          <div class="body-homepage__content">
+            <div class="content-wrapper">
+              <div class="content-wrapper__header">
+                <p class="header-title">Mới cập nhật</p>
+                <div class="header-control">
+                  <div class="header-control__left wrapper1">
+                    <i class="bi bi-chevron-left"></i>
+                  </div>
+                  <div class="header-control__right wrapper1">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-wrapper__body wrapper1">
+                <div class="wrapper__body-container wrapper1 active">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/10/27/d/2/3/7/1635303040636_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Nhạc Âu Mỹ Hôm Nay Nghe Gì?</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper1 active">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/10/27/d/2/3/7/1635304558776_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">US-UK Today's Top Hits</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper1 active">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/10/26/d/4/1/1/1635240493765_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Bài Hát Yêu Thích Tháng 10/2021</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper1 active">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/10/22/8/d/a/8/1634879046462_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Nhạc Việt Đẹp Như Thơ</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper1">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/10/28/4/a/9/e/1635399302001_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Hit-Maker Việt</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper1">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/09/13/5/8/1/f/1631526419017_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">K-POP Hay Nhất 2021</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper1">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/10/28/4/a/9/e/1635405113525_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Rising Hits: Pop</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-wrapper">
+              <div class="content-wrapper__header">
+                <p class="header-title">Cảm Xúc Mùa Thu</p>
+                <div class="header-control">
+                  <div class="header-control__left wrapper2">
+                    <i class="bi bi-chevron-left"></i>
+                  </div>
+                  <div class="header-control__right wrapper2">
+                    <i class="bi bi-chevron-right"></i>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-wrapper__body wrapper2">
+                <div class="wrapper__body-container wrapper2 active">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/09/13/5/8/1/f/1631509207304_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Fallen Leaves - Nhạc Hàn Về Mùa Thu</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper2 active">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/09/13/5/8/1/f/1631509319362_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Cozy Season - Mùa Của Những Bản Nhạc Không Lời</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper2 active">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/09/13/5/8/1/f/1631509112943_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Autumn Acoustic</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper2 active">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/09/13/5/8/1/f/1631509600663_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Autumn Night</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper2">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/09/13/5/8/1/f/1631509073456_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Fall In Love</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper2">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/09/13/5/8/1/f/1631511359473_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Mùa Thu Để Yêu</p>
+                </div>
+
+                <div class="wrapper__body-container wrapper2">
+                  <div class="body-container__img">
+                    <i class="bi bi-play-circle-fill"></i>
+                    <img src="https://avatar-ex-swe.nixcdn.com/playlist/2021/09/13/5/8/1/f/1631509164691_300.jpg" alt="Image" />
+                  </div>
+                  <p class="body-container__title">Windy Day</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="content-new">
+              <p class="content-new__title">Mới Phát Hành</p>
+
+              <div class="content-new__header">
+                <div class="content-new__header-img">
+                  <img src="" alt="Image" />
+                </div>
+                <div class="content-new__header-description">
+                  <div class="description-name">Song Name</div>
+                  <div class="description-singer">Singer</div>
+                  <div class="description-date">
+                    <i class="bi bi-calendar2-week"></i>
+                    <p>Ngày phát hành</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="content-new__status"></div>
+            </div>
+          </div>
+
+          <div class="body-homepage__footer">
+            <div class="homepage__footer-header">
+              <div class="footer-header__left">
+                <p>Giới thiệu</p>
+                <p>SP-DV</p>
+                <p>Hỗ Trợ</p>
+                <p>Thỏa thuận sử dụng</p>
+              </div>
+              <div class="footer-header__right">
+                <div class="right-social">
+                  <i class="bi bi-facebook"></i>
+                  <i class="bi bi-instagram"></i>
+                </div>
+                <div class="right-download">
+                  <img src="./assets/images/app-store.webp" alt="App Store" />
+                  <img src="./assets/images/gg-play.webp" alt="GG Play" />
+                  <img src="./assets/images/app-gallery.webp" alt="App" />
+                </div>
+              </div>
+            </div>
+            <div class="homepage__footer-description">
+              <div class="footer-description__header">
+                <div class="description__header-left">
+                  <div class="left-img">
+                    <img src="https://stc-id.nixcdn.com/v12s/images/logo-nctc.svg" alt="logo NCT" />
+                  </div>
+                  <div class="left-title">
+                    <h3>CÔNG TY CỔ PHẦN N C T</h3>
+                    <p>Chủ sở hữu website: <span>Ông Nhan Thế Luân</span></p>
+                  </div>
+                </div>
+                <div class="description__header-right">
+                  <img src="https://stc-id.nixcdn.com/v12s/images/Cong_Thuong.svg" alt="logo" />
+                  <img src="https://stc-id.nixcdn.com/v12s/images/DMCA.svg" alt="logo" />
+                </div>
+              </div>
+
+              <div class="footer-description__content">
+                <ul>
+                  <li>Giấy phép MXH số 499/GP-BTTTT do Bộ Thông Tin và Truyền thông cấp ngày 28/09/2015.</li>
+                  <li>Giấy Chứng nhận Đăng ký Kinh doanh số 0305535715 do Sở kế hoạch và Đầu tư Tp.Hồ Chí Minh cấp ngày 01/03/2008.</li>
+                </ul>
+              </div>
+            </div>
+            <div class="homepage__footer-location">
+              <i class="bi bi-geo-alt-fill"></i>
+              <p>Tòa nhà The 678 Tower, 67 Hoàng Văn Thái, P.Tân Phú, Q.7, TP.HCM</p>
+              <i class="bi bi-telephone-fill"></i>
+              <p>(028) 3868 7979</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Warning Container -->
+      <div class="warning-container">
+        <i class="bi bi-exclamation-triangle-fill"></i>
+        <p>Tính năng chưa được cập nhật !</p>
+      </div>
+    </div>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
